@@ -1,0 +1,38 @@
+{
+  "version": "22.3-adaptive-hybrid-studio",
+  "base": "22.2-yahoo-coverage-fix",
+  "entrypoint": "app.py",
+  "data_layer_version": "22.2-yahoo-coverage-fix",
+  "default_history_provider": "AUTO_FAST",
+  "strategy_layer": {
+    "stage_gate": "Kostolany_A1_A2_A3_B1_B2_B3_first",
+    "horizon_specific_weights": true,
+    "walk_forward_rank_ic": true,
+    "hybrid_book_x_ic": true,
+    "optional_gbm_challenger": true,
+    "gbm_selection_eligible_by_default": false,
+    "excel_report": true
+  },
+  "tests": {
+    "pytest": "198 passed",
+    "compileall": "passed"
+  },
+  "data_transport": {
+    "auto_fast": "FINLAB_BULK if ready else YAHOO_FAST with V22.2 coverage repair",
+    "official_bulk": "TWSE_TPEX_whole_market_daily_actual_amount",
+    "finmind": "explicit_slow_fallback_only",
+    "silent_finmind_fallback_from_auto_fast": false
+  },
+  "research_guard": {
+    "adaptive_labels": "matured_history_only",
+    "diagnostic_candidate_can_auto_win": false,
+    "repeated_fast_tuning_is_fresh_holdout": false,
+    "real_market_profitability_proven": false
+  },
+  "limitations": [
+    "no real Streamlit Cloud deployment was performed from this environment",
+    "no new real-market profitability validation was run for V22.3",
+    "repeated fast-mode tuning consumes development evidence",
+    "current-snapshot roster limitations remain unless a historical membership source is supplied"
+  ]
+}

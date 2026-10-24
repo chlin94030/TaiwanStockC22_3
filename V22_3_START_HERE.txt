@@ -1,0 +1,17 @@
+Alpha Radar V22.3 — Start here
+
+1. If your current repository is V22.2, apply the V22.3 patch. Do not delete data/.
+2. Open app.py. Use the V22.3 strategy page and adopt the already-prepared dataset.
+3. Keep the already-calibrated pool fixed. Do not rerun pool research merely to change weights.
+4. Use the quick editor:
+   - choose candidate;
+   - choose 5 / 20 / 60 sessions;
+   - choose A1 / A2 / B3;
+   - edit 1–4 factors and weights;
+   - choose manual / hybrid_ic / ic_adaptive.
+5. Run “快速驗證”. This does not inspect the final tail.
+6. Download V22_TEST_REPORT.zip or V22_TEST_REPORT.xlsx and use candidate ranking, stage performance, IC, adaptive-weight path and factor sensitivity for the next adjustment.
+7. The optional GBM challenger is slower and diagnostic-only by default. Turn it on only when you want a model-comparison reference.
+8. Only after the hypothesis is frozen should you use the one-time final confirmation.
+
+Important: V22.3 improves the research/iteration architecture. It does not establish future profitability or authorize automatic orders.
